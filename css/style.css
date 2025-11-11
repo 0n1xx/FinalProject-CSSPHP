@@ -28,6 +28,14 @@ body{
     animation: fadeInUp 1.2s ease;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+}
+
 /* Customizing the font size */
 html {
     font-size: 62.5%; /* equivalent to 10px */
@@ -471,19 +479,19 @@ footer{
     text-indent: 2rem;
 }
 
-/* Designing the login page */
-/* 2. The image itself – give it a fixed max-width */
-.login-img-block{
+/* Designing the login page and registration page */
+/* I don't set so many configurations, just trying to reuse what I already have */
+.login-reg-img-block{
     margin-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.logo-ipod-img img{
+.login-reg-img img{
     width: 12rem;
     height: auto;
 }
 
-.form-instructions-login{
+.form-instructions-login-reg{
     margin-top: 1rem;
 }

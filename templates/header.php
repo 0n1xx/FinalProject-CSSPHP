@@ -16,20 +16,25 @@
     <!-- This is the element that connects css file to our html_css_js_introduction file -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Using a special google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- Creating a header with the nav bar -->
 <header>
-    <div class="logo-container">
-        <a href="index.php">
-            <img src="logo_img/logo.jpg" alt="header logo">
+    <div>
+        <a href="home.php" class="logo">
+            <img src="images/logo.png" alt="header logo">
         </a>
+        <p>QuébecIpod</p>
     </div>
     <nav>
-        <ul class="big_screens_li">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Support Page</a></li>
-            <li><a href="#">About Page</a></li>
-        </ul>
+        <menu>
+            <li class="nav_menu"><a href="home.php">Home</a></li>
+            <li class="nav_menu"><a href="about.php">About</a></li>
+            <li class="nav_menu"><a href="shop.php">Shop</a></li>
+            <li class="nav_menu"><a href="contact.php">Contact</a></li>
+        </menu>
     </nav>
+    <div class="register">
+        <a href="register.php">Register</a>
+    </div>
 </header>
