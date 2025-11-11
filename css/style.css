@@ -2,6 +2,7 @@
 :root{
     --white: #FAFAFA;
     --text: #1C1A22;
+    --light-grey: #F5F5F5;
     --light-blue-back: #F1F7FD;
     --blue-back: #80B3E5;
     --dark-blue-back: #0f0f1a;
@@ -294,4 +295,178 @@ footer{
     background-color: transparent;
     color: #fff;
     border: 2px solid #fff;
+}
+
+/* Designing the contact page */
+.intro-contact-page{
+    background-color: var(--light-grey);
+    min-height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro-contact-page h1{
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.intro-contact-page p{
+    font-weight: 300;
+    font-size: 2rem;
+    width: 60ch;
+    text-align: center;
+    margin-top: 0;
+}
+
+.methods-of-contact{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.contact-method{
+    padding: 1.2rem 3.2rem;
+    background-color: var(--light-grey);
+    border: 0.3rem solid var(--light-grey);
+    border-radius: 1rem;
+}
+
+.contact-method{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Designing the form */
+.contact-form-section{
+    background-color: var(--light-grey);
+    min-height: 90rem;
+}
+
+.contact-form-instructions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.contact-form-instructions h3{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.contact-form-instructions p{
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.contact-form{
+    max-width: 50rem;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: #fffffb; /* just use it for the form here, so it has some visual differences */
+    border-radius: 2rem;
+}
+
+.contact-form fieldset {
+    border: none;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--text);
+}
+
+.contact-form input,
+.contact-form select{
+    height: 4rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: var(--text);
+    background: var(--light-grey);
+    border: 1px solid var(--light-grey);
+    border-radius: 1.2rem;
+}
+
+.contact-form textarea {
+    max-height: 5rem;
+    padding:  1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text);
+    background: var(--light-grey);
+    border: 1px solid var(--light-grey);
+    border-radius: 1.2rem;
+}
+
+.contact-form .submit-button {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.contact-form button {
+    min-width: 20rem;
+    height: 5rem;
+    padding: 0 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #0071e3 0%, #00c2cb 100%); /* I found different buttons design patters and
+    asked chose this one, no way I'd write this by myself */
+    border: none;
+    border-radius: 1.2rem;
+}
+
+.frequently-asked-questions{
+    width: 40%;
+    margin: 0 auto
+}
+
+.frequently-asked-questions-intro{
+    text-align: center;
+}
+
+.frequently-asked-questions-intro h3{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.frequently-asked-questions-intro p{
+    font-size: 1.5rem;
+}
+
+.question-answer{
+    background: var(--light-grey);
+    border: 1px solid var(--light-grey);
+    border-radius: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.question-answer h4,
+.question-answer p{
+    padding: 0.8rem 0.8rem;
+    text-align: left;
+}
+
+.question-answer h4{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.question-answer p{
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    text-indent: 2rem;
 }
