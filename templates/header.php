@@ -17,3 +17,19 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Using a special google font -->
 </head>
+<body>
+<!-- Creating a header with the nav bar -->
+<header>
+    <div class="logo-container">
+        <a href="index.php">
+            <img src="logo_img/logo.jpg" alt="header logo">
+        </a>
+    </div>
+    <nav>
+        <ul class="big_screens_li">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Support Page</a></li>
+            <li><a href="#">About Page</a></li>
+        </ul>
+    </nav>
+</header>
