@@ -26,7 +26,7 @@
 │   ├── header.php
 │   ├── footer.php
 │
-│── /logo_image
+│── /images
 │  
 │
 ├── /includes
