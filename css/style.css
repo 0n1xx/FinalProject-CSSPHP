@@ -343,12 +343,12 @@ footer{
 }
 
 /* Designing the form */
-.contact-form-section{
+.form-section{
     background-color: var(--light-grey);
-    min-height: 90rem;
+    padding-bottom: 2rem;
 }
 
-.contact-form-instructions{
+.form-instructions{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -356,17 +356,17 @@ footer{
     margin-top: 5rem;
 }
 
-.contact-form-instructions h3{
+.form-instructions h3{
     font-size: 3rem;
     font-weight: 600;
 }
 
-.contact-form-instructions p{
+.form-instructions p{
     font-size: 1.5rem;
     margin-top: 0;
 }
 
-.contact-form{
+.form-details{
     max-width: 50rem;
     margin: 3rem auto;
     padding: 2.5rem;
@@ -374,13 +374,13 @@ footer{
     border-radius: 2rem;
 }
 
-.contact-form fieldset {
+.form-details fieldset {
     border: none;
     display: grid;
     gap: 1.5rem;
 }
 
-.contact-form label {
+.form-details label {
     display: block;
     font-size: 1.2rem;
     font-weight: 600;
@@ -388,8 +388,8 @@ footer{
     color: var(--text);
 }
 
-.contact-form input,
-.contact-form select{
+.form-details input,
+.form-details select{
     height: 4rem;
     padding: 0 1rem;
     font-size: 1rem;
@@ -399,7 +399,7 @@ footer{
     border-radius: 1.2rem;
 }
 
-.contact-form textarea {
+.form-details textarea {
     max-height: 5rem;
     padding:  1rem;
     font-size: 1rem;
@@ -410,12 +410,12 @@ footer{
     border-radius: 1.2rem;
 }
 
-.contact-form .submit-button {
+.form-details .submit-button {
     margin-top: 1.5rem;
     text-align: center;
 }
 
-.contact-form button {
+.form-details button {
     min-width: 20rem;
     height: 5rem;
     padding: 0 2rem;
@@ -469,4 +469,21 @@ footer{
     margin-top: 0.5rem;
     font-size: 1.2rem;
     text-indent: 2rem;
+}
+
+/* Designing the login page */
+/* 2. The image itself – give it a fixed max-width */
+.login-img-block{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-ipod-img img{
+    width: 12rem;
+    height: auto;
+}
+
+.form-instructions-login{
+    margin-top: 1rem;
 }
