@@ -1,272 +1,297 @@
-/* Adding reusable colours that I will use during the whole file */
-:root {
-    --base: #FAFAFA;
-    --text: #1C1A21;
-    --primary: #3C6AAF;
-    --secondary:#FDEFED;
-    --accent: #594157;
-    --legend_colour: #9899A6;
+/* root colours that will be reused during the whole project */
+:root{
+    --white: #FAFAFA;
+    --text: #1C1A22;
+    --light-blue-back: #F1F7FD;
+    --blue-back: #80B3E5;
+    --dark-blue-back: #0f0f1a;
 }
 
-/* General settings */
+/* Smooth animation of getting elements up */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General styling rules */
 body{
     margin: 0;
     padding: 0;
-    font-family: "Lora", sans-serif;
+    background-color: var(--white);
+    animation: fadeInUp 1.2s ease;
 }
 
-/* Starting resetting the default cause it's so convenient  */
+/* Customizing the font size */
 html {
     font-size: 62.5%; /* equivalent to 10px */
 }
 
-/* Layout customization */
-/* Designing the header and the footer layout */
-header,
-footer{
-    display: grid;
-    grid-template-columns: 20% 80%;
-    height: 15rem;
-    width: 100%;
-    background-color: var(--secondary);
+/* Designing the header section */
+header{
+    padding: 1.6rem 4rem;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--light-blue-back);
 }
 
-header div img,
-footer div img {
-    height: 100%;
-    max-height: 15rem;
+/* making the first div with the image and the name of the company a flex container */
+header > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .logo img {
+    width: 7rem;
+    height: 7rem;
     object-fit: contain;
 }
 
-header > nav > ul,
-footer div:last-of-type{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-/* Deleting default elements */
-header ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Decided to find some customization for underline decorations */
-/* Set the thickness and what type of line I want, in this case solid */
-header ul a{
-    color: var(--primary);
-    font-weight: 500;
-    font-size: 3rem;
-    text-align: center;
-    text-decoration-line: underline;
-    text-decoration-color: var(--primary);
-    text-decoration-thickness: 0.35rem;
-    text-decoration-style: solid;
-}
-
-/* When I'm hovering, I want it to change a colour */
-header ul a:hover{
-    color: var(--accent);
-    text-decoration-color: var(--accent);
-}
-
-main h1{
-    text-align: center;
-    color: var(--primary);
+/* Doing some generic customization */
+header div p {
     font-weight: 700;
-    font-size: 3.5rem;
-}
-
-/* Styling my form */
-
-/* First of all, putting the form right in the center and cutting some edges out of it, so it's taking just 80% */
-form{
-    margin: 0 auto;
-    width: 80%;
-}
-
-/* Styling a fieldset, legend and label */
-/* Just making it look good enough for a form by applying font-weight, font-size and other common properties */
-form fieldset {
-    border: 0.2rem solid var(--primary);
-    border-radius: 1rem;
-    padding: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-form legend{
-    font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--text);
 }
 
-form fieldset label {
-    display: block;
-    margin: 1rem 0 0.5rem;
-    font-size: 2rem;
-    font-weight: 300;
-    color: var(--text);
-}
-
-/* Making the div with the submit button a flex container to put the button at the center */
-#submit_button{
+/* Making a nav bar a flex container */
+header nav {
+    flex-grow: 1;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-/* Designing the button itself */
-#submit_button  button {
-    padding: 1rem 3rem;
+header nav menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    list-style: none;
+}
+
+/* Doing some basic customisation for a elements*/
+header nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+header .register a{
+    text-decoration: none;
+    color: var(--base);
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0.5rem 0.5rem;
+    border: 0.3rem solid var(--blue-back);
+    border-radius: 1rem;
+    background-color: var(--blue-back);
+}
+
+/* Designing the footer section */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.6rem 4rem;
+    background-color: var(--dark-blue-back);
+}
+
+.footer-logo > div{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem; /* All put a 0 in front of the number */
+}
+
+.footer-logo div:first-child p{
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+.footer-logo p{
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.footer-logo img {
+    width: 7rem;
+    height: 7rem;
+    object-fit: contain;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links nav menu{
+    list-style: none;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.footer-social-networks p {
+    color: var(--white);
     font-size: 2rem;
     font-weight: 600;
-    background-color: var(--primary);
-    color: #fff;
-    border: none;
-    border-radius: 0.5rem;
-    margin-bottom: 2.5rem;
+    text-align: center;
 }
 
-/* Designing different forms */
-form input{
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    background-color: #fff;
-    box-sizing: border-box;
+
+.footer-social-networks a{
+    text-decoration: none;
 }
 
-/* Simple styling for file input to match your form */
-/* File input styling */
+.footer-social-networks img {
+    width: 4rem;
+    height: 4rem;
+    filter: brightness(0) invert(1); /* Makes icons white if they're originally colored */
+}
 
-.form-label {
-    margin-bottom: 0.5rem;
+/* Designing the about section */
+/* Designing a section with h1 element */
+.about-intro-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 20rem;
+}
+
+.about-intro-section h1{
+    font-weight: 700;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.about-intro-section p{
+    font-size: 1.8rem;
+}
+
+/* Designing a section with the history of the company */
+.about-primary-section{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.about-primary-section div{
+    width: 50%;
+}
+
+.about-primary-section p{
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: 0.03rem;
+    text-indent: 3rem;
+}
+
+/* Designing a section with additional info about the company */
+.additional-company-fact{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.additional-company-fact-text{
+    text-align: left;
+}
+
+.additional-company-fact-text h2{
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.additional-company-fact-text p,
+.additional-company-fact-text ul,
+.additional-company-fact-text li{
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: 0.03rem;
+}
+
+.additional-company-fact-image-con img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: contain;
+}
+
+.additional-company-fact-image-con p{
+    margin-top: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: 0.03rem;
+}
+
+.restore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-back);
+    flex-direction: column;
+    min-height: 25rem;
+}
+
+.restore-info{
+    text-align: center;
+}
+
+.restore-info h2{
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.restore-info p{
     font-size: 2rem;
     font-weight: 300;
-    color: var(--text);
+    color: var(--white);
 }
 
-input[type="file"] {
-    padding: 1.5rem;
-    font-size: 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    box-sizing: border-box;
+.restore-actions{
+    margin-top: 3rem;
 }
 
-/* ::-webkit-file-upload-button this part I googled, i was just curious how to apply styling specifically
-    to the button when we're uploading a file
- */
-input[type="file"]::-webkit-file-upload-button {
-    padding: 1rem 2rem;
-    margin-right: 1rem;
-    border: none;
-    background-color: var(--primary);
+    /* Shared button base */
+.restore-actions a {
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 1.2rem 3.2rem;
+    border-radius: 5rem;
+}
+
+
+/* Filled white button */
+.restore-actions .btn-primary {
+    background-color: #fff;
+    color: #3575e2;
+    border: 2px solid #fff;
+}
+
+/* Outlined white button */
+.restore-actions .btn-secondary {
+    background-color: transparent;
     color: #fff;
-    font-size: 1.5rem;
-    font-weight: 600;
-    border-radius: 0.5rem;
-    cursor: pointer;
-}
-
-.text-muted {
-    display: block;
-    margin-top: 0.5rem;
-    font-size: 1.3rem;
-    color: var(--text);
-}
-
-/* Success or error message design */
-.alert_success{
-    border: 0.2rem solid #0e0e0e;
-    background-color: #BADA55;
-    margin-bottom: 1.5rem;
-    height: 5rem;
-}
-
-.alert_failure{
-    border: 0.2rem solid #0e0e0e;
-    background-color: #e63946;
-    margin-bottom: 1.5rem;
-    height: 5rem;
-}
-
-.alert_success p,
-.alert_failure p{
-    font-size: 1.5rem;
-    color: var(--text);
-    font-weight: 600;
-    text-align: center;
-}
-
-/* Designing a page of viewing our data */
-/* Creating a layout for a view page */
-#view-information {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 3rem;
-    justify-items: center;
-    align-items: start;
-}
-
-/* Each profile card */
-.user-profile {
-    background-color: var(--secondary);
-    border: 2px solid var(--primary);
-    border-radius: 1rem;
-    width: 100%;
-    max-width: 35rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 3rem;
-}
-
-/* Profile image area */
-.user-image {
-    width: 100%;
-    height: 30rem;
-    border-bottom: 1px solid var(--primary);
-}
-
-.user-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Profile details text */
-.user-details {
-    padding: 1rem;
-    text-align: center;
-}
-
-.user-details p {
-    font-size: 1.6rem;
-    color: var(--text);
-    margin: 0.5rem 0;
-}
-
-/* Designing the text where there are no profiles */
-.no-profiles {
-    font-size: 2rem;
-    text-align: center;
-    color: var(--text);
-}
-
-/* Styling paragraphs in the footer */
-/* Basically applying some padding customization: text and margin */
-footer p {
-    margin: 0.5rem 0;
-}
-
-footer p {
-    font-weight: 500;
-    color: var(--primary);
-    font-size: 2rem;
-    text-align: center;
+    border: 2px solid #fff;
 }
