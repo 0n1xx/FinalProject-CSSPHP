@@ -64,8 +64,8 @@
                 Let's bring your iPod back to life</p>
         </div>
         <div class="restore-actions">
-            <a href="team.php" class="btn-primary">Meet the team</a>
-            <a href="contact.php" class="btn-secondary">Get in touch</a>
+            <a href="team.php" class="button-primary">Meet the team</a>
+            <a href="contact.php" class="button-secondary">Get in touch</a>
         </div>
     </section>
 </main>

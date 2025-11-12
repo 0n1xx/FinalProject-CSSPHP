@@ -28,10 +28,12 @@ body{
     animation: fadeInUp 1.2s ease;
 }
 
+/* Setting one font for specific elements */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
 }
 
+/* Setting another one for the p element */
 p {
     font-family: 'Inter', sans-serif;
 }
@@ -120,9 +122,10 @@ footer{
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 0.5rem; /* All put a 0 in front of the number */
+    gap: 0.5rem; /* All put a 0 in front of the number :) */
 }
 
+/* Setting some customization to decorate some elements */
 .footer-logo div:first-child p{
     font-size: 2.5rem;
     color: var(--white);
@@ -168,10 +171,11 @@ footer{
     text-decoration: none;
 }
 
+
 .footer-social-networks img {
     width: 4rem;
     height: 4rem;
-    filter: brightness(0) invert(1); /* Makes icons white if they're originally colored */
+    filter: brightness(0) invert(1); /* Makes icons white if they're originally colored, googled this function */
 }
 
 /* Designing the about section */
@@ -281,7 +285,7 @@ footer{
     margin-top: 3rem;
 }
 
-    /* Shared button base */
+/* Shared button base */
 .restore-actions a {
     text-decoration: none;
     font-size: 1.7rem;
@@ -290,16 +294,13 @@ footer{
     border-radius: 5rem;
 }
 
-
-/* Filled white button */
-.restore-actions .btn-primary {
+.restore-actions .button-primary {
     background-color: #fff;
     color: #3575e2;
     border: 2px solid #fff;
 }
 
-/* Outlined white button */
-.restore-actions .btn-secondary {
+.restore-actions .button-secondary {
     background-color: transparent;
     color: #fff;
     border: 2px solid #fff;
@@ -495,3 +496,26 @@ footer{
 .form-instructions-login-reg{
     margin-top: 1rem;
 }
+
+/* Designing the home page */
+.intro-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro-home h1{
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.intro-home p{
+    font-size: 2rem;
+}
+
+/* need to come back and continue designing the home page
+
+/* Designing the shop page
+
+
