@@ -6,6 +6,14 @@
     --light-blue-back: #F1F7FD;
     --blue-back: #80B3E5;
     --dark-blue-back: #0f0f1a;
+    --h1-font-size: clamp(3.5rem, 4rem, 4.5rem);
+    --h1-font-weight: 700;
+    --h2-font-size: clamp(2.5rem, 3rem, 3.5rem);
+    --h2-font-weight: 600;
+    --h3-font-size: clamp(2rem, 2.5rem, 3rem);
+    --h3-font-weight: 500;
+    --h4-font-size: clamp(1rem, 1.5rem, 2rem);
+    --h4-font-weight: 500;
 }
 
 /* Smooth animation of getting elements up */
@@ -190,8 +198,8 @@ footer{
 }
 
 .about-intro-section h1{
-    font-weight: 700;
-    font-size: 4rem;
+    font-weight: var(--h1-font-weight);
+    font-size: var(--h1-font-size);
     margin: 0;
 }
 
@@ -231,8 +239,8 @@ footer{
 }
 
 .additional-company-fact-text h2{
-    font-weight: 600;
-    font-size: 3rem;
+    font-weight: var(--h2-font-weight);
+    font-size: var(--h2-font-size);
 }
 
 .additional-company-fact-text p,
@@ -270,8 +278,8 @@ footer{
 }
 
 .restore-info h2{
-    font-size: 3.5rem;
-    font-weight: 600;
+    font-size: var(--h2-font-size);
+    font-weight: var(--h2-font-weight);
     color: var(--white);
 }
 
@@ -281,12 +289,12 @@ footer{
     color: var(--white);
 }
 
-.restore-actions{
+.buttons{
     margin-top: 3rem;
 }
 
 /* Shared button base */
-.restore-actions a {
+.buttons a {
     text-decoration: none;
     font-size: 1.7rem;
     font-weight: 600;
@@ -294,13 +302,15 @@ footer{
     border-radius: 5rem;
 }
 
-.restore-actions .button-primary {
+
+/* Designing buttons for the about page */
+.button-about-primary {
     background-color: #fff;
     color: #3575e2;
     border: 2px solid #fff;
 }
 
-.restore-actions .button-secondary {
+.button-about-secondary {
     background-color: transparent;
     color: #fff;
     border: 2px solid #fff;
@@ -317,8 +327,8 @@ footer{
 }
 
 .intro-contact-page h1{
-    font-weight: 700;
-    font-size: 4rem;
+    font-weight: var(--h1-font-weight);
+    font-size: var(--h1-font-size);
 }
 
 .intro-contact-page p{
@@ -366,8 +376,8 @@ footer{
 }
 
 .form-instructions h3{
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: var(--h3-font-size);
+    font-weight: var(--h3-font-weight);
 }
 
 .form-instructions p{
@@ -447,8 +457,8 @@ footer{
 }
 
 .frequently-asked-questions-intro h3{
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: var(--h3-font-size);
+    font-weight: var(--h3-font-weight);
 }
 
 .frequently-asked-questions-intro p{
@@ -469,8 +479,8 @@ footer{
 }
 
 .question-answer h4{
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: var(--h4-font-size);
+    font-weight: var(--h4-font-weight);
     margin-bottom: 0;
 }
 
@@ -503,18 +513,171 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-image: url("../images/home_page_background_image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 50rem;
 }
 
 .intro-home h1{
-    font-size: 5rem;
-    font-weight: 600;
+    font-size: var(--h1-font-size);
+    font-weight: var(--h1-font-weight);
 }
 
 .intro-home p{
     font-size: 2rem;
 }
 
-/* need to come back and continue designing the home page
+.restore-actions{
+    margin-top: 3rem;
+}
+
+/* Designing buttons for the home page */
+.button-home-primary {
+    background-color: #A7E0D7;
+    color: #0A6B5A;
+    border: 2px solid #fff;
+}
+
+.button-home-secondary {
+    background-color: transparent;
+    color: #8ED7CC;
+    border: 2px solid #A7E0D7;
+}
+
+/* Designing a header for the content on the home page */
+.info-home-header,
+.info-home-page{
+    width: 80%;
+    margin: 5rem auto;
+}
+
+.info-home-header h2{
+    font-size: var(--h2-font-size);
+    font-weight: var(--h2-font-weight);
+    text-align: left;
+}
+
+/* Designing the layout for the main info on the home page */
+.info-home-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(50px,auto);
+    gap: 2rem;
+}
+
+.ipod-headphones {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.ipod-headphones img {
+    height: 50rem;
+    border-radius: 1.5rem;
+}
+
+.ipod-card {
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.ipod-card img{
+    width: auto;
+    height: 20rem;
+    border-radius: 1rem;
+}
+
+/* The column for the ipod classic */
+.ipod-card:nth-child(1){
+    grid-column: 3;
+}
+
+/* The column for the ipod mini */
+.ipod-card:nth-child(2){
+    grid-column: 4;
+}
+
+/* The column for the ipod shuffle */
+.ipod-card:nth-child(3){
+    grid-column: 5;
+}
+
+.brand-story {
+    grid-column: 3 / -1;
+    grid-row: 2;
+}
+
+/* Designing some elements for this page */
+.ipod-card h4{
+    font-size: var(--h4-font-size);
+    font-weight: var(--h4-font-weight);
+}
+
+.brand-story{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.brand-story h3{
+    font-weight: var(--h3-font-weight);
+    font-size: var(--h3-font-size);
+    margin-bottom: 0;
+}
+
+.brand-story p{
+    font-size: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: 0.03rem;
+    width: 40ch;
+}
+
+.button-about-us {
+    background-color: transparent;
+    color: #CCCCCC;
+    border: 2px solid #CCCCCC;
+}
+
+/* Working on the additional information on my home page */
+.info-home-additional{
+    width: 80%;
+    margin: 3rem auto;
+}
+
+.info-home-additional h3{
+    font-size: var(--h3-font-size);
+    font-weight: var(--h3-font-weight);
+}
+
+/* I need to reuse it for the home page */
+.home-form-input {
+    height: 4rem;
+    width: 35%;
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: var(--text);
+    background: var(--light-grey);
+    border: 1px solid var(--light-grey);
+    border-radius: 1.2rem;
+}
+
+.home-form-button {
+    min-width: 15%;
+    height: 4rem;
+    padding: 0 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #A7E0D7;
+    color: #0A6B5A;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+}
 
 /* Designing the shop page
 
