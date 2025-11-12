@@ -73,4 +73,3 @@ Table: `products_description`
 
 ### Developer
 - **Role:** Full-Stack (Backend + Frontend + Design)
----
