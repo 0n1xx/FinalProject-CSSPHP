@@ -17,22 +17,23 @@
     <section class="info-home-header">
         <h2>Discover our classics</h2>
     </section>
+    <!-- Creating a main section for the home page -->
     <section class="info-home-page">
         <!-- Big iPod with headphones -->
         <div class="ipod-headphones">
-            <img src="../images/ipod_headphones_home_page.png" alt="iPod with headphones">
+            <img src="./images/ipod_headphones_home_page.png" alt="iPod with headphones">
         </div>
         <!-- Three small iPods which will used as small image cards -->
         <div class="ipod-card">
-            <img src="../images/ipod_classic_home_page.png" alt="iPod Classic">
+            <img src="./images/ipod_classic_home_page.png" alt="iPod Classic">
             <h4>iPod Classic</h4>
         </div>
         <div class="ipod-card">
-            <img src="../images/ipod_mini_home_page.png" alt="iPod Mini">
+            <img src="./images/ipod_mini_home_page.png" alt="iPod Mini">
             <h4>iPod Mini</h4>
         </div>
         <div class="ipod-card">
-            <img src="../images/ipod_shuffle_home_page.png" alt="iPod Shuffle">
+            <img src="./images/ipod_shuffle_home_page.png" alt="iPod Shuffle">
             <h4>iPod Shuffle</h4>
         </div>
         <div class="brand-story">
@@ -43,11 +44,12 @@
             </div>
         </div>
     </section>
-    <section class="info-home-additional">
+    <!-- Creating an additional info section that is also reused on the shop page -->
+    <section class="info-additional">
         <h3>Stay tuned for exclusive drops and retro revivals.</h3>
         <form action="#" method="post">
-            <input type="email" class="home-form-input" placeholder="Your Email" required>
-            <button type="submit" class="home-form-button">Subscribe</button>
+            <input type="email" class="additional-form-input" placeholder="Your Email" required>
+            <button type="submit" class="additional-form-button">Subscribe</button>
         </form>
     </section>
 </main>

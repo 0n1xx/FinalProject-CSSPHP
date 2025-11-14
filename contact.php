@@ -9,6 +9,7 @@
       <p>We'd love to hear from you. Whether you have a question about our iPods, repairs, or just want to say hello.</p>
   </section>
   <section class="methods-of-contact">
+    <!-- created contact cards, clients can have multiple ways to contact us -->
     <div class="contact-method">
       <h3>Email Us</h3>
       <p>Send us an email anytime</p>
@@ -31,6 +32,7 @@
       <p>Fill out the form below and we'll get back to you within 24 hours.</p>
     </div>
     <div class="form-details">
+      <!-- Creating the form to contact us -->
       <form action="contact.php" method="post">
         <fieldset>
           <label for="first-name">First Name</label>
@@ -59,6 +61,7 @@
     </div>
   </section>
   <section class="frequently-asked-questions">
+    <!-- Added some cards for frequently asked questions -->
     <div class="frequently-asked-questions-intro">
       <h3>Frequently Asked Questions</h3>
       <p>Quick answers to common questions</p>

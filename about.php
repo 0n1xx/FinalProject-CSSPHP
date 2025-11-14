@@ -1,4 +1,5 @@
 <?php
+    // Adding the header using PHP
     $pageTitle = "About Page";
     $pageDes = "This is the about page.";
     require "./templates/header.php";
@@ -12,6 +13,7 @@
     </section>
     <section class="about-primary-section">
         <div class="about-company-fact">
+            <!-- Generated the text about my company -->
             <p>
                 Founded in the heart of Québec, QuébecIpod began as a small community of music lovers passionate about
                 preserving the legacy of the iPod. What started as a local repair and resale shop quickly grew into
@@ -51,7 +53,7 @@
             </ul>
         </div>
         <div class="additional-company-fact-image-con">
-            <a href="home.php" class="logo">
+            <a href="html_test_dir/home.html" class="logo">
                 <img src="images/quebecflag.png" alt="quebec flag">
             </a>
             <p>Crafted with passion in Québec</p>
@@ -63,9 +65,9 @@
             <p>Join thousands of satisfied customers who trust us with their precious music devices.
                 Let's bring your iPod back to life</p>
         </div>
-        <div class="restore-actions">
-            <a href="team.php" class="button-primary">Meet the team</a>
-            <a href="contact.php" class="button-secondary">Get in touch</a>
+        <div class="buttons">
+            <a href="team.php" class="button-about-primary">Meet the team</a>
+            <a href="contact.php" class="button-about-secondary">Get in touch</a>
         </div>
     </section>
 </main>
