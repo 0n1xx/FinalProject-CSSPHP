@@ -1,11 +1,14 @@
 /* root colours that will be reused during the whole project */
 :root{
+    /* General colours across the page */
     --white: #FAFAFA;
     --text: #1C1A22;
     --light-grey: #F5F5F5;
     --light-blue-back: #F1F7FD;
     --blue-back: #80B3E5;
     --dark-blue-back: #0f0f1a;
+
+    /* General values to all "h" elements to keep everything consistent */
     --h1-font-size: clamp(3.5rem, 4rem, 4.5rem);
     --h1-font-weight: 700;
     --h2-font-size: clamp(2.5rem, 3rem, 3.5rem);
@@ -16,7 +19,7 @@
     --h4-font-weight: 500;
 }
 
-/* Smooth animation of getting elements up */
+/* Smooth animation of getting elements up for the whole page */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -36,22 +39,31 @@ body{
     animation: fadeInUp 1.2s ease;
 }
 
-/* Setting one font for specific elements */
+/* Setting one font for specific elements and the setting the automatic colour */
+/* I will just overwrite it in case I actually need to do so */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
+    color: var(--text);
 }
 
 /* Setting another one for the p element */
 p {
     font-family: 'Inter', sans-serif;
+    color: var(--text);
 }
 
 /* Customizing the font size */
+/* I changed it to the equivalent of 10px, just to do math easier when setting the font-size */
 html {
     font-size: 62.5%; /* equivalent to 10px */
 }
 
-/* Designing the header section */
+/* Decided to design the elements that I'm going to reuse on every page */
+/*
+* Designing the header section
+*/
+
+/* Making the header be sticky */
 header{
     padding: 1.6rem 4rem;
     display: flex;
@@ -77,10 +89,9 @@ header .logo img {
 }
 
 /* Doing some generic customization */
-header div p {
-    font-weight: 700;
-    font-size: 3rem;
-    color: var(--text);
+header div p{
+    font-weight: var(--h1-font-weight);
+    font-size: var(--h1-font-size);
 }
 
 /* Making a nav bar a flex container */
@@ -116,6 +127,11 @@ header .register a{
     border-radius: 1rem;
     background-color: var(--blue-back);
 }
+
+
+/*
+* Designing the footer section
+*/
 
 /* Designing the footer section */
 footer{
@@ -174,11 +190,9 @@ footer{
     text-align: center;
 }
 
-
 .footer-social-networks a{
     text-decoration: none;
 }
-
 
 .footer-social-networks img {
     width: 4rem;
@@ -186,8 +200,11 @@ footer{
     filter: brightness(0) invert(1); /* Makes icons white if they're originally colored, googled this function */
 }
 
-/* Designing the about section */
-/* Designing a section with h1 element */
+
+/*
+* Designing the about section
+*/
+
 .about-intro-section{
     display: flex;
     justify-content: center;
@@ -304,6 +321,8 @@ footer{
 
 
 /* Designing buttons for the about page */
+/* I didn't put these colours at the root elements because I only use them once */
+/* They still have the same colour palette but again I'm not going to reuse these colours */
 .button-about-primary {
     background-color: #fff;
     color: #3575e2;
@@ -316,7 +335,10 @@ footer{
     border: 2px solid #fff;
 }
 
-/* Designing the contact page */
+
+/*
+* Designing the contact page
+*/
 .intro-contact-page{
     background-color: var(--light-grey);
     min-height: 20rem;
@@ -361,7 +383,7 @@ footer{
     flex-direction: column;
 }
 
-/* Designing the form */
+/* Designing the form of the contact page */
 .form-section{
     background-color: var(--light-grey);
     padding-bottom: 2rem;
@@ -393,13 +415,13 @@ footer{
     border-radius: 2rem;
 }
 
-.form-details fieldset {
+.form-details fieldset{
     border: none;
     display: grid;
     gap: 1.5rem;
 }
 
-.form-details label {
+.form-details label{
     display: block;
     font-size: 1.2rem;
     font-weight: 600;
@@ -447,6 +469,7 @@ footer{
     border-radius: 1.2rem;
 }
 
+/* Design the section with the frequently asked questions */
 .frequently-asked-questions{
     width: 40%;
     margin: 0 auto
@@ -490,7 +513,9 @@ footer{
     text-indent: 2rem;
 }
 
-/* Designing the login page and registration page */
+/*
+* Designing the login page and registration page
+*/
 /* I don't set so many configurations, just trying to reuse what I already have */
 .login-reg-img-block{
     margin-top: 1rem;
@@ -507,7 +532,9 @@ footer{
     margin-top: 1rem;
 }
 
-/* Designing the home page */
+/*
+* Designing the home page
+*/
 .intro-home{
     display: flex;
     justify-content: center;
@@ -534,6 +561,7 @@ footer{
 }
 
 /* Designing buttons for the home page */
+/* Colours are in the same colours palette but again only use them here */
 .button-home-primary {
     background-color: #A7E0D7;
     color: #0A6B5A;
@@ -679,7 +707,9 @@ footer{
     border-radius: 1rem;
 }
 
-/* Designing the shop page */
+/*
+* Designing the shop page
+*/
 .intro-shop{
     text-align: center;
 }
