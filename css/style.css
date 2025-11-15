@@ -383,6 +383,11 @@ footer{
     flex-direction: column;
 }
 
+.image-contact-method{
+    height: 5rem;
+    border-radius: 5rem;
+}
+
 /* Designing the form of the contact page */
 .form-section{
     background-color: var(--light-grey);
@@ -423,7 +428,7 @@ footer{
 
 .form-details label{
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0.4rem;
     color: var(--text);
@@ -433,7 +438,7 @@ footer{
 .form-details select{
     height: 4rem;
     padding: 0 1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: var(--text);
     background: var(--light-grey);
     border: 1px solid var(--light-grey);
@@ -443,7 +448,7 @@ footer{
 .form-details textarea {
     max-height: 5rem;
     padding:  1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.5;
     color: var(--text);
     background: var(--light-grey);
@@ -460,7 +465,7 @@ footer{
     min-width: 20rem;
     height: 5rem;
     padding: 0 2rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #fff;
     background: linear-gradient(135deg, #0071e3 0%, #00c2cb 100%); /* I found different buttons design patters and
@@ -485,7 +490,7 @@ footer{
 }
 
 .frequently-asked-questions-intro p{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .question-answer{
@@ -493,15 +498,16 @@ footer{
     border: 1px solid var(--light-grey);
     border-radius: 1.2rem;
     margin-bottom: 1.5rem;
+    min-height: 3rem;
 }
 
-.question-answer h4,
+.question-answer summary,
 .question-answer p{
     padding: 0.8rem 0.8rem;
     text-align: left;
 }
 
-.question-answer h4{
+.question-answer summary{
     font-size: var(--h4-font-size);
     font-weight: var(--h4-font-weight);
     margin-bottom: 0;
